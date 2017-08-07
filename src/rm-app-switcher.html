@@ -1,0 +1,13 @@
+<div class="rm-app-switcher"  ng-class="{'rm-app-switcher-open': showDropdown}">
+    <div ng-click="showDropdown = !showDropdown" class="rm-app-switcher-button"></div>
+    <div class="rm-app-switcher-dropdown">
+        <ul > 
+            <li ng-repeat="rmApp in rmAppList">
+                <a href="{{rmApp.url}}">
+                    <div class="rm-app-switcher-icon {{rmApp.icon}}"></div>
+                    <div class="rm-app-switcher-title" ng-bind="rmApp.name"></div>
+                </a>
+            </li> 
+        </ul> 
+    </div>
+</div>

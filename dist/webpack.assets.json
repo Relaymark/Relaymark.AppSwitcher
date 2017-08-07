@@ -1,0 +1,6 @@
+{
+  "rm-app-switcher": {
+    "js": "rm-app-switcher.js",
+    "css": "rm-app-switcher.css"
+  }
+}
