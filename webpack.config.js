@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         test: /\.scss$/, 
-        loader: ExtractTextPlugin.extract("style", "css-loader!resolve-url-loader!sass-loader")
+        loader: ExtractTextPlugin.extract("style", "css-loader?zindex!resolve-url-loader!sass-loader") 
       },
       {
           test: /\.html$/,
@@ -69,7 +69,12 @@ module.exports = {
       disable: false // Disabled when in test mode or not in build mode
     }),
     new OptimizeCssAssetsPlugin({
-      cssProcessorOptions: { discardComments: { removeAll: true } }
+      cssProcessorOptions: { 
+        discardComments: { 
+          removeAll: true 
+        },
+        safe: true
+      }
     }),
     new AssetsPlugin({
       filename: "webpack.assets.json",
